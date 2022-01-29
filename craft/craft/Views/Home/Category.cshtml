@@ -1,0 +1,23 @@
+﻿@model Category
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 offset-lg-3 col-md-12 col-12">
+                <div class="breadcrumbs-content">
+                    <h1 class="page-title">@Model.Name</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container py-5">
+    <div class="row">
+        @foreach (Project item in Model.Projects)
+        {
+            <div class="col-md-4 mb-3">
+                <img src="~/assets/images/portfolio/@item.Image" class="w-100" />
+                <h4 class="mt-3">@item.Title</h4>
+            </div>
+        }
+    </div>
+</div>
